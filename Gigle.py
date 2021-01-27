@@ -20,7 +20,6 @@ class Gigle(object):
         p = Parser()
         for fajl in os.listdir("./python-2.7.7-docs-html"):
             if fajl[-4:] == "html":
-                # parsiraj ga odje
                 name = os.path.abspath(os.path.join("./python-2.7.7-docs-html", fajl))
                 links, words = p.parse(name)
                 self.stablo.insert_list(words, name)  # add to trie name words
